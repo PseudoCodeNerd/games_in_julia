@@ -24,3 +24,8 @@ The final submission should include a GitHub Gist or GitHub Repo with the code a
 <hr>
 
 **Homo Sapien v/s Homo Sapien**
+
+![](vsHomogif.gif)
+
+<hr>
+

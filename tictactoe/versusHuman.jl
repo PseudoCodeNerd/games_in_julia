@@ -9,67 +9,113 @@ who would finish first.
 Might be untidy. FAIR WARNING.
 =#
 
-avalPos = []
-for i in 1:9
-    i = parse(string, i)
-    push!(avalPos, i)
+println("TicTacToe\nWelcome, Player One is X. Player Two is O.\n\nLet's Start.")
+println("--------------------------------")
+
+game_board = [" ", " ", " ",
+                " ", " ", " ",
+                " ", " ", " "]
+
+function display()
+    println("+-----------+")
+    println("Board move grid:\n 1 2 3\n 4 5 6\n 7 8 9")
+    println("+-----------+")
+    println("| ", game_board[1], " | ", game_board[2], " | ", game_board[3], " |")
+    println("+-----------+")
+    println("| ", game_board[4], " | ", game_board[5], " | ", game_board[6], " |")
+    println("+-----------+")
+    println("| ", game_board[7], " | ", game_board[8], " | ", game_board[9], " |")
+    println("+-----------+")
 end
 
-p1_turn = true
-winYet = false
-
-function display() 
-    println( '\n -----')
-    println( '|' + avalPos[1] + '|' + avalPos[2] + '|' + avalPos[3] + '|')
-    println( ' -----')
-    println( '|' + avalPos[4] + '|' + avalPos[5] + '|' + avalPos[6] + '|')
-    println( ' -----')
-    println( '|' + avalPos[7] + '|' + avalPos[8] + '|' + avalPos[9] + '|')
-    println( ' -----\n')
+function temp_row_check(c, one, two, three)
+    if c == game_board[one] == game_board[two] == game_board[three]
+        return true
+    end
 end
 
-while (!winYet)
-    display()
-    if p1_turn
-        println("Player 1 :")
+display()
+
+function main_check(a)
+    if temp_row_check(a,3,6,9) == true
+        return true
+    elseif temp_row_check(a,1,4,7) == true
+        return true
+    elseif temp_row_check(a,2,5,8) == true
+        return true
+    elseif temp_row_check(a,1,2,3) == true
+        return true
+    elseif temp_row_check(a,4,5,6) == true
+        return true
+    elseif temp_row_check(a,7,8,9) == true
+        return true
+    elseif temp_row_check(a,1,5,9) == true
+        return true
+    elseif temp_row_check(a,3,5,7) == true
+        return true
     else
-        println("Player 2 :")
-    end
+        return false
+    end 
+end
 
-    
-    println("Enter the position\n>> ")
-    choice = Int(readline())
+let
+play = true
+playerOneTurn = true
 
-    
-    if avalPos[choice] == 'X' || avalPos[choice] == 'O'
-        println("Invalid Move. Position occupied.")
-        continue
-    end
-
-    if p1_turn
-        avalPos[choice] = 'X'
-    else
-        avalPos[choice] = 'O'
-    end
-
-    p1_turn !=p1_turn
-
-    for x in 0:2
-        y = x * 3
-        if (avalPos[y] == avalPos[(y + 1)] && avalPos[y] == avalPos[(y + 2)])
-            winYet = true
-            display()
-        end
-        if (avalPos[x] == avalPos[(x + 3)] && avalPos[x] == avalPos[(x + 6)])
-            winYet = true
-            display()
+function check_for_draw()
+    avalPos = []
+    for i in 1:9
+        if game_board[i] != "X" && game_board[i] != "O"
+            push!(avalPos, i)
         end
     end
+    if length(avalPos) == 0 && main_check("X") == false && main_check("Y") == false 
+       return true
+    else
+        return false 
+    end 
+end
 
-    if ((avalPos[0] == avalPos[4] && avalPos[0] == avalPos[8]) || 
-       (avalPos[2] == avalPos[4] && avalPos[4] == avalPos[6])) 
-        winYet = true
-        display()
+while play == true
+    if playerOneTurn
+        print("Player One, Enter (X)")
+    else
+        print("Player Two, Enter (O)")
     end
-
+    println("\nEnter the position : ")
+    uspos = string(readline())
+    uspos = parse(Int,uspos)
+    if game_board[uspos] != "X" && game_board[uspos] != "O" && check_for_draw() == false
+        if playerOneTurn
+            game_board[uspos] = "X"
+        else
+            game_board[uspos] = "O"
+        end
+        playerOneTurn = (!playerOneTurn)
+        if main_check("X") == true
+            display()
+            println("Player One wins! Congratulations")
+            break
+        elseif main_check("O") == true
+            display()
+            print("Player Two wins! Congratulations")
+            break
+        end
+        if check_for_draw() == false
+            display()
+            if main_check("X") == true
+                println("Player One wins! Congratulations")
+                break
+            elseif main_check("O") == true
+                print("Player Two wins! Congratulations")
+                break
+            end
+        else
+            print("GG! It's a draw.")
+            break
+        end
+    else
+        println("Sorry, try again.")
+    end
+end
 end
