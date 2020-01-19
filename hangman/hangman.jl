@@ -36,7 +36,7 @@ Hey Waddup Bruv ! How You Doin' ?
       |
       |
 =========
-Bro What is this ? Why's there a noose around my Neck!?
+Bro What is this ? I don't like this!
 """, 
 """
   +---+
