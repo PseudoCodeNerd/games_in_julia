@@ -56,7 +56,7 @@ o
       |
       |
 =========
-Bro WTH ! Why's there's a noose around mah Neck!?
+Bro What is this ? I don't like this!
 
 ______
 Player 2, Guess a letter of this word (single character):
@@ -82,7 +82,7 @@ q
       |
       |
 =========
-Aww Crap ! You're trying to hang me! right ?
+Aww Man ! Guessing isn't that hard...
 
 ______
 Player 2, Guess a letter of this word (single character):
@@ -121,7 +121,7 @@ r
  /    |
       |
 =========
-Ok Ok! Go On! You are of no use.... You'll kill me I'm sure now!
+Ok Ok! Go On! You are of no help to me now.
 
 ma__av
 Player 2, Guess a letter of this word (single character):
