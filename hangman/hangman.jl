@@ -36,7 +36,7 @@ Hey Waddup Bruv ! How You Doin' ?
       |
       |
 =========
-Bro WTH ! Why's there's a noose around mah Neck!?
+Bro What is this ? Why's there a noose around my Neck!?
 """, 
 """
   +---+
@@ -58,7 +58,7 @@ Dude Seriously ! What are you doing ????
       |
       |
 =========
-Aww Crap ! You're trying to hang me! right ?
+Aww Man ! You're trying to hang me! right ?
 """,
 """
   +---+
@@ -80,7 +80,7 @@ Bro You should've given up by now YO! SRSLY...
  /    |
       |
 =========
-Ok Ok! Go On! You are of no use.... You'll kill me I'm sure now!
+Ok Ok! Go On! You are of no help to me now.
 """,
 """
   +---+
@@ -194,7 +194,7 @@ while (someoneWon == false && chanceOn<7)
     end
     
     if chanceOn>=7
-        print("F! Hang Boi is Ded. All because of you.\n Player 1 Wins!")
+        print("Hang Boi is Ded. All because of you.\n Player 1 Wins!")
         break
     end
 
