@@ -1,4 +1,4 @@
-# /s Hangman in Julia
+# Hangman in Julia
 
 > Don't feel bad by what the *Hang-Boi* says.
 
