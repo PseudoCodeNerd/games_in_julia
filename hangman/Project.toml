@@ -1,0 +1,11 @@
+name = "hangman"
+uuid = "27f5e400-e994-4e5a-a2d6-201d734c1d21"
+authors = ["Madhav <shekharmadhav03@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Cairo = "159f3aea-2a34-519c-b102-8c37f9878175"
+Graphics = "a2bd30eb-e257-5431-a919-1863eab51364"
+Gtk = "4c0ca9eb-093a-5379-98c5-f87ac0bbbf44"
+ImageView = "86fae568-95e7-573e-a6b2-d8a6b900c9ef"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
