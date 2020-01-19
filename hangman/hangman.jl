@@ -58,7 +58,7 @@ Dude Seriously ! What are you doing ????
       |
       |
 =========
-Aww Man ! You're trying to hang me! right ?
+Aww Man ! Guessing isn't that hard...
 """,
 """
   +---+
@@ -194,7 +194,7 @@ while (someoneWon == false && chanceOn<7)
     end
     
     if chanceOn>=7
-        print("Hang Boi is Ded. All because of you.\n Player 1 Wins!")
+        print("Hang Boi is no more. \n Player 1 Wins!")
         break
     end
 
